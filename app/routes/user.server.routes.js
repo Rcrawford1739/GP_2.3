@@ -34,7 +34,6 @@ app.set('view engine', 'ejs');
 // Load the 'index' routing file
 require('./index.server.routes.js');
 // Load the user routing file used for http REST requests.
-require('../app/routes/user.server.routes.js')(app);
 // Configure static file serving
 app.use(express.static('./public'));
 // Return the Express application instance
