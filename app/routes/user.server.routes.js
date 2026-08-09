@@ -1,5 +1,5 @@
 // Load the module dependencies
-const config = require('./config');
+const config = require('../../config/config');
 const express = require('express');
 const morgan = require('morgan');
 const compress = require('compression');
@@ -32,7 +32,7 @@ secret: config.sessionSecret
 app.set('views', './app/views');
 app.set('view engine', 'ejs');
 // Load the 'index' routing file
-require('../app/routes/index.server.routes.js')(app);
+require('./index.server.routes.js');
 // Load the user routing file used for http REST requests.
 require('../app/routes/user.server.routes.js')(app);
 // Configure static file serving
